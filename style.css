@@ -1,0 +1,85 @@
+    :root { --paper: #f7f5f0; --ink: #252e2a; --muted: #626a64; --line: #d8dcd3; --accent: #38634e; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; line-height: 1.9; overflow-wrap: anywhere; }
+    a { color: inherit; text-underline-offset: .3em; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    .wrap { width: min(100% - 48px, 1040px); margin-inline: auto; }
+    .skip { position: absolute; top: -100px; left: 16px; padding: 8px 16px; background: white; }
+    .skip:focus { top: 8px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 25px; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 24px; font-size: 13px; }
+    nav a { text-decoration: none; }
+    .hero { padding-block: 96px 88px; border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .18em; }
+    h1 { margin: 22px 0 0; font-size: clamp(42px, 8vw, 80px); font-weight: 500; letter-spacing: .12em; line-height: 1.4; }
+    .roman { margin-top: 8px; font-family: Georgia, serif; font-size: clamp(22px, 4vw, 32px); letter-spacing: .04em; color: var(--muted); }
+    .intro { max-width: 530px; margin-top: 30px; font-size: 15px; }
+    .button { display: inline-block; margin-top: 16px; padding: 10px 22px; border: 1px solid var(--accent); border-radius: 3px; color: var(--accent); text-decoration: none; font-size: 14px; }
+    .button:hover { color: var(--paper); background: var(--accent); }
+    .section { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 40px; padding-block: 52px; border-bottom: 1px solid var(--line); }
+    .section-label { margin: 0 0 4px; color: var(--accent); font-size: 11px; letter-spacing: .15em; }
+    h2 { margin: 0; font-size: 23px; font-weight: 500; }
+    .content > :first-child { margin-top: 0; }
+    .content > :last-child { margin-bottom: 0; }
+    .content p { font-size: 15px; }
+    .detail { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; padding-block: 15px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .detail:last-child { border-bottom: none; }
+    dt { color: var(--muted); }
+    dd { margin: 0; }
+    .note { color: var(--muted); }
+    .activity { padding: 24px 0; border-top: 1px solid var(--line); }
+    .activity:first-child { border-top: none; padding-top: 0; }
+    h3 { margin: 12px 0 6px; font-size: 18px; font-weight: 500; }
+    .activity p { margin: 0; }
+    .external { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 20px; border-block: 1px solid var(--line); text-decoration: none; }
+    .external small { display: block; color: var(--muted); font-size: 13px; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-block: 28px; font-size: 12px; color: var(--muted); }
+    .research-link { padding-top: 14px; }
+    .section-note { font-size: 13px; }
+    .group-title { margin: 32px 0 16px; color: var(--accent); font-size: 16px; }
+    .publications { list-style: none; margin: 0; padding: 0; }
+    .publications li { padding: 22px 0; border-top: 1px solid var(--line); }
+    .pub-year { color: var(--accent); font-size: 12px; letter-spacing: .04em; }
+    h4 { margin: 8px 0; font-size: 16px; line-height: 1.65; font-weight: 600; }
+    h4 a { text-decoration: none; }
+    h4 a:hover { text-decoration: underline; }
+    .publications p { margin: 6px 0; font-size: 13px; line-height: 1.8; }
+    .venue { color: var(--muted); }
+    .pub-link, .source-link { font-size: 12px; }
+    .timeline { margin: 0; }
+    .external + .external { border-top: 0; }
+    @media (max-width: 640px) {
+      .wrap { width: calc(100% - 40px); }
+      header { align-items: flex-start; flex-direction: column; gap: 12px; padding-block: 20px; }
+      nav { gap: 20px; }
+      .hero { padding-block: 60px; }
+      .section { grid-template-columns: 1fr; gap: 24px; padding-block: 36px; }
+      .intro { font-size: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Shared page navigation and page headings. */
+header { flex-wrap: wrap; }
+nav a[aria-current="page"] { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: .5em; }
+.page-section { min-height: 60vh; }
+h1.page-title { margin: 0; font-size: 28px; letter-spacing: .02em; line-height: 1.5; }
+.page-section .section-label { margin-bottom: 10px; }
+.breadcrumb { margin: 30px 0 0; color: var(--muted); font-size: 12px; }
+.home-pages { padding-block: 24px 48px; }
+.home-page-link { display: grid; grid-template-columns: 180px minmax(0, 1fr) 24px; align-items: center; gap: 24px; padding-block: 24px; border-bottom: 1px solid var(--line); text-decoration: none; }
+.home-page-link strong { font-size: 18px; font-weight: 500; }
+.home-page-link small { color: var(--muted); font-size: 14px; }
+@media (max-width: 640px) {
+  .home-page-link { grid-template-columns: minmax(0, 1fr) 24px; gap: 8px; }
+  .home-page-link small { grid-column: 1; grid-row: 2; }
+  .home-page-link .arrow { grid-column: 2; grid-row: 1 / 3; }
+}
+
+.activity h2 { margin: 12px 0 6px; font-size: 18px; font-weight: 500; }
+h2.group-title { font-size: 16px; }
+.publications h3 { margin: 8px 0; font-size: 16px; line-height: 1.65; font-weight: 600; }
+.publications h3 a { text-decoration: none; }
+.publications h3 a:hover { text-decoration: underline; }

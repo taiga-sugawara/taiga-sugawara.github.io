@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>菅原大雅のホームページ</title>
-  <style>
-    body {
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 0 24px;
-      font-family: sans-serif;
-      line-height: 1.8;
-      color: #263238;
-      background: #f8fafc;
-    }
-    h1 { color: #2563eb; }
-    section { margin-top: 36px; }
-  </style>
+  <meta name="description" content="菅原大雅の個人ホームページ。大阪大学大学院基礎工学研究科。マルチエージェントシステムの制御理論、協調物体運搬の研究・論文・経歴を紹介します。">
+  <meta name="color-scheme" content="light">
+  <title>菅原大雅 | Taiga Sugawara</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>菅原大雅のホームページ</h1>
-  <p>ようこそ。活動や関心のあることを紹介しています。</p>
-
-  <section>
-    <h2>自己紹介</h2>
-    <p>菅原大雅です。ここにプロフィールを書きます。</p>
-  </section>
-
-  <section>
-    <h2>活動・研究・作品</h2>
-    <ul>
-      <li>活動内容や研究テーマ</li>
-      <li>制作した作品やプロジェクト</li>
-    </ul>
-  </section>
+<body id="top">
+  <a class="skip" href="#main">本文へ移動</a>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html" aria-label="ホームへ">TAIGA SUGAWARA</a>
+      <nav aria-label="メインナビゲーション">
+        <a href="index.html" aria-current="page">ホーム</a>
+        <a href="about.html">自己紹介</a>
+        <a href="research.html">研究</a>
+        <a href="publications.html">論文・発表</a>
+        <a href="career.html">経歴・受賞</a>
+        <a href="links.html">リンク</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="name">
+        <p class="eyebrow">CONTROL &amp; MULTI-AGENT SYSTEMS</p>
+        <h1 id="name">菅原 大雅</h1>
+        <p class="roman" lang="en">Taiga Sugawara</p>
+        <p class="intro">複数のロボットが協調して動くための制御を研究しています。<br>マルチエージェントシステムの制御理論と、把持力の制約を考慮した物体運搬に取り組んでいます。</p>
+        <a class="button" href="about.html">プロフィールを見る <span aria-hidden="true">→</span></a>
+      </section>
+      <div class="home-pages" aria-label="各ページの紹介">
+        <a class="home-page-link" href="about.html"><strong>自己紹介</strong><small>所属と研究分野について</small><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="home-page-link" href="research.html"><strong>研究</strong><small>協調物体運搬と把持力の最適化</small><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="home-page-link" href="publications.html"><strong>論文・発表</strong><small>学術誌論文、プレプリント、学会発表</small><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="home-page-link" href="career.html"><strong>経歴・受賞</strong><small>学歴と受賞歴</small><span class="arrow" aria-hidden="true">→</span></a>
+        <a class="home-page-link" href="links.html"><strong>リンク</strong><small>Google Scholar、GitHub、研究室</small><span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </main>
+    <footer><span>© Taiga Sugawara</span><a href="#top">ページの先頭へ ↑</a></footer>
+  </div>
 </body>
 </html>
