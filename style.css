@@ -26,8 +26,7 @@ nav a { position: relative; padding-block: 9px; text-decoration: none; white-spa
 nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
 nav a:hover::after, nav a[aria-current='page']::after { transform: scaleX(1); }
 nav a[aria-current='page'] { color: var(--accent); }
-.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 360px); align-items: center; column-gap: 40px; padding-top: 76px; }
-.hero-portrait { width: 100%; aspect-ratio: 1; height: auto; border-radius: 50%; object-fit: cover; object-position: center bottom; }
+.hero { position: relative; display: grid; grid-template-columns: 1fr; align-items: center; column-gap: 12px; padding-top: 76px; }
 .eyebrow { margin: 0; color: var(--accent); font-size: 10px; letter-spacing: .15em; font-weight: 600; }
 .tiny-dot { display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 9px; vertical-align: 1px; }
 h1 { margin: 30px 0 18px; font-family: var(--serif); font-size: clamp(74px, 8.9vw, 130px); font-weight: 400; letter-spacing: -.065em; line-height: .97; }
@@ -114,7 +113,7 @@ footer p { margin: 3px 0 0; color: var(--muted); font-size: 12px; letter-spacing
 @media (max-width: 1050px) {
   .wrap { width: calc(100% - 64px); }
   nav { gap: 17px; font-size: 12px; }
-  .hero { grid-template-columns: minmax(0, 1fr) minmax(220px, 30%); padding-top: 56px; }
+  .hero { padding-top: 56px; }
   h1 { font-size: clamp(70px, 9.5vw, 105px); }
   .japanese-name span { display: block; margin-top: 8px; }
   .home-page-link { grid-template-columns: 30px minmax(210px, 1fr) minmax(0, 1fr) 40px; gap: 12px; }
@@ -127,7 +126,6 @@ footer p { margin: 3px 0 0; color: var(--muted); font-size: 12px; letter-spacing
   nav a { padding-block: 6px; }
   .brand { font-size: 11px; }
   .hero { grid-template-columns: 1fr; padding-top: 46px; }
-  .hero-portrait { width: min(76vw, 300px); justify-self: center; margin-top: 36px; }
   h1 { font-size: clamp(72px, 15vw, 108px); margin-top: 26px; }
   .eyebrow { font-size: 9px; }
   .japanese-name { font-size: 15px; }
